@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stunning Web Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #4caf50;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .brand {
+      font-size: 1.8em;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    .hero {
+      height: 70vh;
+      background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5em;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      animation: fadeIn 2s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .content {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content h2 {
+      text-align: center;
+      color: #4caf50;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .content .card {
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+
+    .content .card:hover {
+      transform: scale(1.05);
+    }
+
+    .footer {
+      background-color: #4caf50;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+    }
+
+    .scroll-top.visible {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="brand">My Beautiful Site</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to My Stunning Web Page</h1>
+  </div>
+
+  <div class="content" id="home">
+    <h2>About Us</h2>
+    <div class="card">
+      <p>This is a beautifully designed website template for your needs. It includes a hero section with a background image and a simple yet elegant layout.</p>
+    </div>
+    <h2>Our Services</h2>
+    <div class="card">
+      <p>We provide top-notch web development services. Our goal is to make sure your website stands out with both aesthetic appeal and functionality.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2024 My Beautiful Site. All rights reserved.</p>
+  </footer>
+
+  <div class="scroll-top" id="scrollTop">
+    &#8679;
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrollTop = document.getElementById('scrollTop');
+      if (window.scrollY > 100) {
+        scrollTop.classList.add('visible');
+      } else {
+        scrollTop.classList.remove('visible');
+      }
+    });
+
+    document.getElementById('scrollTop').addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+
+</html>
